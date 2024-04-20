@@ -1,0 +1,225 @@
+@media (width>=600px) {
+    .main-body {
+        width: 100%;
+        height: 85%;
+        background-color: azure;
+        overflow: auto;
+    }
+    .main-body::-webkit-scrollbar {
+        display: none;
+    }
+    .friends-search {
+        width: 100%;
+        height: 12%;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: azure;
+    }
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .input-search {
+        width: 70%;
+        height: 100%;
+        padding: 15px 4px;
+    }
+    .submit-btn {
+        width: 30%;
+        height: 100%;
+        padding: 15px 4px;
+    }
+    .input-search input {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        outline: none;
+        border-radius: 5px;
+        padding: 0px 10px;
+        font-size: 18px;
+        background-color: transparent;
+    }
+    .submit-btn button {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        font-size: 20px;
+        border: 2px solid black;
+        background-color: rgba(11, 11, 154, 0.5);
+        cursor: pointer;
+    }
+    .friends-list {
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .not-found {
+        width: 100%;
+        height: 88%;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-items {
+        width: 100%;
+        height: 4rem;
+        background-color: rgba(13, 13, 190, 0.596);
+        margin-bottom: 10px;
+        display: flex;
+    }
+    .item-logo {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-name {
+        width: 70%;
+        height: 85%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 255, 0.421);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+    }
+    .item-name {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px 0px 0px;
+    }
+    .name-section {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        overflow-x: auto;
+        text-wrap: nowrap;
+    }
+    .name-section::-webkit-scrollbar {
+        display: none;
+    }
+    .name-section a {
+        text-decoration: none;
+        color: white;
+    }
+}
+@media (width<=600px) {
+    .main-body {
+        width: 100%;
+        height: 85%;
+        background-color: azure;
+        overflow: auto;
+    }
+    .main-body::-webkit-scrollbar {
+        display: none;
+    }
+    .friends-search {
+        width: 100%;
+        height: 12%;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        background-color: azure;
+    }
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .input-search {
+        width: 70%;
+        height: 100%;
+        padding: 15px 4px;
+    }
+    .submit-btn {
+        width: 30%;
+        height: 100%;
+        padding: 15px 4px;
+    }
+    .input-search input {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        outline: none;
+        border-radius: 5px;
+        padding: 0px 10px;
+        font-size: 18px;
+        background-color: transparent;
+    }
+    .submit-btn button {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        font-size: 20px;
+        border: 2px solid black;
+        background-color: rgba(11, 11, 154, 0.5);
+    }
+    .friends-list {
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .not-found {
+        width: 100%;
+        height: 88%;
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-items {
+        width: 100%;
+        height: 4rem;
+        background-color: rgba(13, 13, 190, 0.596);
+        margin-bottom: 10px;
+        display: flex;
+    }
+    .item-logo {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-name {
+        width: 70%;
+        height: 85%;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 255, 0.421);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+    }
+    .item-name {
+        width: 75%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0px 15px 0px 0px;
+    }
+    .name-section {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        overflow-x: auto;
+        text-wrap: nowrap;
+    }
+    .name-section::-webkit-scrollbar {
+        display: none;
+    }
+    .name-section a {
+        text-decoration: none;
+        color: white;
+    }
+}

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/aboutPages.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>ChatSystem</title>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <p>ChatSystem</p>
+            </div>
+            <div class="home">
+                <a href="{% url 'friendsPage' %}"><i class="fa-solid fa-house-chimney"></i></a>
+            </div>
+        </div>
+        <div class="bodybar">
+            <div class="header">
+                <p>Welcome to ChatSystem 🙏</p>
+            </div>
+            <div class="content">
+                <p>
+                    Thank You for Being a Part of Our Chat Community!
+                </p>
+                <p>
+                    🗝️ We're thrilled to have you here! At ChatSystem, we believe in the power of meaningful conversations and connections. Your presence enriches our community, and we're grateful for every keystroke that contributes to the vibrant conversations within our platform.
+                </p>
+                <p>
+                    We understand that you have choices when it comes to online communication. Your decision to join ChatSystem honors us, and we're committed to providing an exceptional experience. Our team is dedicated to creating a safe, inclusive, and enjoyable environment for everyone.
+                </p>
+            </div>
+            <div class="thanking">
+                <p>Thank You All 🎉</p>
+            </div>
+            <div class="contact">
+                <p><i class="fa-solid fa-envelope"></i> : arwebdotnet@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

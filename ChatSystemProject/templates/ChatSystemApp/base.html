@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/basePages.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>ChatSystem</title>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="site-name">
+                    <p>ChatSystem</p>
+                </div>
+                <div class="more">
+                    <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </div>
+                <div class="hidden-list">
+                    <div class="logout-div">
+                        <a href="{% url 'logoutPage' %}">Logout</a>
+                    </div>
+                    <div class="about-div">
+                        <a href="{% url 'aboutPage' %}">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-list">
+                <div class="friends-logo">
+                    <a href="{% url 'friendsPage' %}">Friends</a>
+                </div>
+                <div class="users-logo">
+                    <a href="{% url 'usersPage' %}">Users</a>
+                </div>
+                <div class="room-logo">
+                    <a href="{% url 'roomPage' %}">Room</a>
+                </div>
+            </div>
+        </div>
+        {% block Content %}
+        {% endblock %}
+    </div>
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

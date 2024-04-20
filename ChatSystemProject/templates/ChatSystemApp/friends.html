@@ -1,0 +1,62 @@
+{% extends 'ChatSystemApp/base.html' %}
+{% load static %}
+{% block Content %}
+    <link rel="stylesheet" href="{% static 'css/friendsPages.css' %}">
+    <div class="main-body">
+        <div class="user-profile">
+            <div class="profile-logo">
+                <div class="logo-letter">
+                    <span>{{request.user.username|slice:'1'|upper}}</span>
+                </div>
+            </div>
+            <div class="profile-name">
+                <div class="name">
+                    <p>{{request.user.username}}</p>
+                </div>
+            </div>
+            <div class="profile-friends">
+                <div class="friends-count">
+                    <div class="count">
+                        <span>{{friends_count}}</span>
+                    </div>
+                    <div class="symbol">
+                        <span>Friends</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="friends-search">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-search">
+                    <input type="text" name="q" placeholder="Find Friends">
+                </div>
+                <div class="submit-btn">
+                    <button type="submit">Find</button>
+                </div>
+            </form>
+        </div>
+        {% if result %}
+            <div class="friends-list">
+                {% for friend in friends %}
+                    <div class="list-items">
+                        <div class="item-logo">
+                            <div class="logo-name">
+                                <span>{{friend.following.followingdata.username|slice:'1'|upper}}</span>
+                            </div>
+                        </div>
+                        <div class="item-name">
+                            <div class="name-section">
+                                <a href="{% url 'chatPage' request.user.id friend.following.followingdata.id %}">{{friend.following.followingdata.username}}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="not-found">
+                <p>No Friend Found</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

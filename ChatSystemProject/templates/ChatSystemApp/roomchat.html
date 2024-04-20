@@ -1,0 +1,138 @@
+{% extends 'ChatSystemApp/base.html' %} {% load static %} {% block Content %}
+<link rel="stylesheet" href="{% static 'css/roomchatPage.css' %}" />
+<div class="main-body">
+  <div class="room">
+    <div class="roomname">
+      <div class="textname">
+        <p>{{room_details.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="message-container">
+    <div class="message-field"></div>
+    <div class="message-input">
+      <form action="" method="POST" id="form">
+        {% csrf_token %}
+        <div class="input-div">
+          <input type="text" id="msg" placeholder="Text" />
+        </div>
+        <div class="btn-div">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $("#form").on("submit", function (e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: '{% url "roomchatPage" room_details.id %}',
+        data: {
+          msg: $("#msg").val(),
+          csrfmiddlewaretoken: "{{ csrf_token }}",
+        },
+        error: function (response) {
+          alert("Failed to Sent.");
+        },
+      });
+      $("#msg").val("");
+    });
+
+    let messageField = document.querySelector(".message-field");
+    messageField.scrollTop = messageField.scrollHeight;
+    let bottom = true;
+    messageField.addEventListener("scroll", function (e) {
+      if (
+        Math.round(messageField.scrollTop) + messageField.clientHeight ==
+        messageField.scrollHeight
+      ) {
+        bottom = true;
+      } else {
+        bottom = false;
+      }
+    });
+    setInterval(function () {
+      if (bottom == true) {
+        messageField.scrollTop = messageField.scrollHeight;
+      }
+      $.ajax({
+        type: "GET",
+        url: '{% url "getroomMessages" room_details.id %}',
+        success: function (response) {
+          $(".message-field").empty();
+          for (let key in response.room_messages) {
+            let msg;
+            if (
+              "{{request.user.username}}" ==
+              response.room_messages[key].user_name
+            ) {
+              let message_id = String(response.room_messages[key].id);
+              let deleteUrl = '{% url "deleteroomMessage" 0 %}'.replace(
+                "0",
+                message_id
+              );
+              msg =
+                '<div class="message-box-right">' +
+                '<div class="message-time">' +
+                '<div class="time-div">' +
+                "<span>" +
+                "@" +
+                response.room_messages[key].user_name +
+                " - " +
+                response.room_messages[key].time.slice(11, 16) +
+                "</span>" +
+                "</div>" +
+                '<div class="delete-div">' +
+                `<a class="adel" data="${message_id}"><i class="fa-solid fa-trash"></i></a>` +
+                "</div>" +
+                "</div>" +
+                '<div class="message-text">' +
+                "<p>" +
+                response.room_messages[key].message +
+                "</p>" +
+                "</div>" +
+                "</div>";
+            } else {
+              msg =
+                '<div class="message-box-left">' +
+                '<div class="message-time">' +
+                '<div class="time-div">' +
+                "<span>" +
+                "@" +
+                response.room_messages[key].user_name +
+                " - " +
+                response.room_messages[key].time.slice(11, 16) +
+                "</span>" +
+                "</div>" +
+                "</div>" +
+                '<div class="message-text">' +
+                "<p>" +
+                response.room_messages[key].message +
+                "</p>" +
+                "</div>" +
+                "</div>";
+            }
+            $(".message-field").append(msg);
+          }
+          $(".adel").on("click", function () {
+            let message_id = this.getAttribute("data");
+            $.ajax({
+              type: "GET",
+              url: '{% url "deleteroomMessage" 0 %}'.replace("0", message_id),
+              success: function (response) {
+                console.log(response.success);
+              },
+            });
+          });
+        },
+        error: function (response) {
+          alert("An Error");
+        },
+      });
+    }, 1000);
+  });
+</script>
+{% endblock %}

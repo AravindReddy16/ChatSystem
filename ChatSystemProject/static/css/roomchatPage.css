@@ -1,0 +1,253 @@
+@media (width>=600px) {
+    .main-body {
+        width: 100%;
+        height: 85%;
+        background-color: azure;
+        overflow: auto;
+    }
+    .main-body::-webkit-scrollbar {
+        display: none;
+    }
+    .room {
+        width: 100%;
+        height: 15%;
+        padding: 17px 10px;
+    }
+    .roomname {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 26, 187, 0.56);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 33px;
+        color: white;
+        padding: 0px 20px;
+    }
+    .textname {
+        width: 100%;
+        height: 65%;
+        overflow: auto;
+        text-wrap: nowrap;
+        text-align: center;
+    }
+    .textname::-webkit-scrollbar {
+        display: none;
+    }
+    .message-container {
+        width: 100%;
+        height: 85%;
+        padding: 5px 10px 10px 10px;
+    }
+    .message-field {
+        width: 100%;
+        height: 85%;
+        border: 2px solid black;
+        overflow: auto;
+        padding: 12px 10px;
+    }
+    .message-field::-webkit-scrollbar {
+        display: none;
+    }
+    .message-box-left {
+        width: 80%;
+        min-height: 15%;
+        background-color: rgba(13, 13, 202, 0.534);
+        padding: 5px 15px;
+        margin-bottom: 7px;
+    }
+    .message-box-right {
+        width: 80%;
+        min-height: 15%;
+        background-color: rgba(13, 13, 202, 0.534);
+        padding: 5px 15px;
+        margin-bottom: 7px;
+        margin-left: 4rem;
+    }
+    .message-time {
+        width: 100%;
+        display: flex;
+    }
+    .time-div {
+        width: 90%;
+        font-weight: bolder;
+    }
+    .delete-div {
+        width: 10%;
+        text-align: end;
+    }
+    .delete-div a {
+        color: rgba(223, 13, 13, 0.855);
+        text-decoration: none;
+    }
+    .message-text {
+        width: 100%;
+        height: 100%;
+        padding-top: 7px;
+        font-size: 18px;
+    }
+    .message-input {
+        width: 100%;
+        height: 15%;
+    }
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .input-div {
+        width: 70%;
+        height: 100%;
+        padding: 20px 5px 15px 0px;
+    }
+    .input-div input {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        outline: none;
+        font-size: 20px;
+        padding: 0px 15px;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    .btn-div {
+        width: 30%;
+        height: 100%;
+        padding: 20px 0px 15px 5px;
+    }
+    .btn-div button {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        font-size: 20px;
+        background-color: rgba(66, 66, 234, 0.621);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+@media (width<=600px) {
+    .main-body {
+        width: 100%;
+        height: 85%;
+        background-color: azure;
+        overflow: auto;
+    }
+    .main-body::-webkit-scrollbar {
+        display: none;
+    }
+    .room {
+        width: 100%;
+        height: 15%;
+        padding: 17px 10px;
+    }
+    .roomname {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 26, 187, 0.56);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 33px;
+        color: white;
+        padding: 0px 20px;
+    }
+    .textname {
+        width: 100%;
+        height: 65%;
+        overflow: auto;
+        text-wrap: nowrap;
+        text-align: center;
+    }
+    .textname::-webkit-scrollbar {
+        display: none;
+    }
+    .message-container {
+        width: 100%;
+        height: 85%;
+        padding: 5px 10px 10px 10px;
+    }
+    .message-field {
+        width: 100%;
+        height: 85%;
+        border: 2px solid black;
+        overflow: auto;
+        padding: 12px 10px;
+    }
+    .message-field::-webkit-scrollbar {
+        display: none;
+    }
+    .message-box-left {
+        width: 80%;
+        min-height: 15%;
+        background-color: rgba(13, 13, 202, 0.534);
+        padding: 5px 15px;
+        margin-bottom: 7px;
+    }
+    .message-box-right {
+        width: 80%;
+        min-height: 15%;
+        background-color: rgba(13, 13, 202, 0.534);
+        padding: 5px 15px;
+        margin-bottom: 7px;
+        margin-left: 4rem;
+    }
+    .message-time {
+        width: 100%;
+        display: flex;
+    }
+    .time-div {
+        width: 90%;
+        font-weight: bolder;
+    }
+    .delete-div {
+        width: 10%;
+        text-align: end;
+    }
+    .delete-div a {
+        color: rgba(223, 13, 13, 0.855);
+        text-decoration: none;
+    }
+    .message-text {
+        width: 100%;
+        height: 100%;
+        padding-top: 7px;
+        font-size: 18px;
+    }
+    .message-input {
+        width: 100%;
+        height: 15%;
+    }
+    form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .input-div {
+        width: 70%;
+        height: 100%;
+        padding: 20px 5px 15px 0px;
+    }
+    .input-div input {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        outline: none;
+        font-size: 20px;
+        padding: 0px 15px;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    .btn-div {
+        width: 30%;
+        height: 100%;
+        padding: 20px 0px 15px 5px;
+    }
+    .btn-div button {
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        font-size: 20px;
+        background-color: rgba(66, 66, 234, 0.621);
+        border-radius: 5px;
+    }
+}

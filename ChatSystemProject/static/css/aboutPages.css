@@ -1,0 +1,153 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@media (width>=600px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        width: 30%;
+        height: 100%;
+    }
+    .topbar {
+        width: 100%;
+        height: 10%;
+        background-color: rgb(87, 87, 212);
+        display: flex;
+    }
+    .logo {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        font-size: 35px;
+        color: white;
+    }
+    .home {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+    .home a {
+        text-decoration: none;
+        color: white;
+    }
+    .bodybar {
+        width: 100%;
+        height: 90%;
+        background-color: rgba(9, 9, 154, 0.516);
+        color: white;
+        overflow: auto;
+        padding: 0px 25px;
+    }
+    .bodybar::-webkit-scrollbar {
+        display: none;
+    }
+    .header {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+    }
+    .content {
+        width: 100%;
+        height: 80%;
+        font-size: 20px;
+    }
+    .content p {
+        margin-bottom: 25px;
+    }
+    .thanking {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+    .contact {
+        width: 100%;
+        height: 30%;
+        font-size: 25px;
+    }
+}
+@media (width <= 600px) {
+    .container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .topbar {
+        width: 100%;
+        height: 10%;
+        background-color: rgb(87, 87, 212);
+        display: flex;
+    }
+    .logo {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        font-size: 35px;
+        color: white;
+    }
+    .home {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+    .home a {
+        text-decoration: none;
+        color: white;
+    }
+    .bodybar {
+        width: 100%;
+        height: 90%;
+        background-color: rgba(9, 9, 154, 0.516);
+        color: white;
+        overflow: auto;
+        padding: 0px 25px;
+    }
+    .bodybar::-webkit-scrollbar {
+        display: none;
+    }
+    .header {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+    }
+    .content {
+        width: 100%;
+        height: 80%;
+        font-size: 20px;
+    }
+    .content p {
+        margin-bottom: 25px;
+    }
+    .thanking {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+    .contact {
+        width: 100%;
+        height: 30%;
+        font-size: 25px;
+    }
+}

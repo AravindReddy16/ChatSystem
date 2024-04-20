@@ -1,0 +1,18 @@
+{% extends 'ChatSystemApp/base.html' %}
+{% load static %}
+{% block Content %}
+    <link rel="stylesheet" href="{% static 'css/roomPages.css' %}">
+    <div class="main-body">
+        <div class="room-input">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" name="roomname" placeholder="Room Name">
+                </div>
+                <div class="btn">
+                    <button type="submit">Enter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
