@@ -1,5 +1,9 @@
 # Chat System
 
+
+https://github.com/user-attachments/assets/2d50cc40-1b50-4942-990f-7d34eda5279a
+
+
 A real-time chat application built with Django, HTML, CSS, JavaScript, and PostgreSQL.
 
 ## Features
